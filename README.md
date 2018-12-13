@@ -19,6 +19,19 @@ Google develops **stackdriver-prometheus** primarily for Stackdriver users and g
 
 Google develops **prometheus-to-sd** primarily for Google Kubernetes Engine to collect metrics from system services in order to support Kubernetes users. We designed the tool to be lean when deployed as a sidecar in your pod. It's intended to support only the metrics the Kubernetes team at Google needs; you can use it to monitor your applications, but the user experience could be rough.
 
+## Build instructions
+
+```
+mkdir -p ~/go/src/github.com/Stackdriver/
+cd ~/go/src/github.com/Stackdriver/
+git clone git@github.com:overleaf/stackdriver-prometheus.git
+cd stackdriver-prometheus/
+git checkout release-0.5.0
+make all
+DOCKER_IMAGE_NAME=gcr.io/overleaf-ops/stackdriver-prometheus make push
+```
+
+
 ## Source Code Headers
 
 Every file containing source code must include copyright and license
