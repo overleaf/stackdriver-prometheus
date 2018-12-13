@@ -47,6 +47,14 @@ var DefaultResourceMappings = []ResourceMap{
 // TODO(jkohen): ensure these are sorted from more specific to less specific.
 var K8sResourceMappings = []ResourceMap{
 	{
+		Type: "gce_instance",
+		LabelMap: map[string]string{
+			ProjectIdLabel:                         "project_id",
+                              "__meta_gce_instance_name":             "instance_id",
+			LocationLabel:                          "zone",
+		},
+	},
+	{
 		Type: "k8s_container",
 		LabelMap: map[string]string{
 			ProjectIdLabel:                         "project_id",
