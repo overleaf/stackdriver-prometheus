@@ -1,7 +1,6 @@
 *#
 .#*
 *-stamp
-/*.yaml
 /*.yml
 /*.rules
 *.exe
