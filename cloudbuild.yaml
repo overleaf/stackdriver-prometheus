@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/go'
-  args: ['all']
+  args: ['-C','~/go/src/github.com/Stackdriver/stackdriver-prometheus','all']
   env: ['PROJECT_ROOT=github.com/Stackdriver/stackdriver-prometheus']
-  entrypoint: make
+  entrypoint: ./go.ash
 
