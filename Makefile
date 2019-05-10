@@ -107,6 +107,6 @@ promu:
 	$(GO) get -u github.com/prometheus/promu
 
 $(FIRST_GOPATH)/bin/staticcheck:
-	@GOOS= GOARCH= $(GO) get -u honnef.co/go/tools/cmd/staticcheck
+	@GOOS= GOARCH= GO111MODULE=on $(GO) get -v honnef.co/go/tools/cmd/staticcheck@release.2017.2
 
 .PHONY: all style check_license format build test vet assets tarball docker promu staticcheck $(FIRST_GOPATH)/bin/staticcheck
