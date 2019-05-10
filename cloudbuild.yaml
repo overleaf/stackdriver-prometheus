@@ -3,4 +3,7 @@ steps:
   args: ['all']
   env: ['PROJECT_ROOT=github.com/Stackdriver/stackdriver-prometheus']
   entrypoint: ./go.ash
+options:
+ diskSizeGb: 200
+ machineType: 'N1_HIGHCPU_8'
 
