@@ -1,7 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/go'
-  args: ['fmt', 'github.com/Stackdriver/stackdriver-prometheus/cmd/prometheus', 'github.com/Stackdriver/stackdriver-prometheus/cmd/promtool','github.com/Stackdriver/stackdriver-prometheus/relabel','github.com/Stackdriver/stackdriver-prometheus/retrieval','github.com/Stackdriver/stackdriver-prometheus/stackdriver','github.com/Stackdriver/stackdriver-prometheus/web','github.com/Stackdriver/stackdriver-prometheus/web/api/v1','github.com/Stackdriver/stackdriver-prometheus/web/ui']
+  args: ['all']
   env: ['PROJECT_ROOT=github.com/Stackdriver/stackdriver-prometheus']
-- name: 'gcr.io/cloud-builders/go'
-  args: ['build', '.']
-  env: ['PROJECT_ROOT=github.com/Stackdriver/stackdriver-prometheus']
+  entrypoint: make
+
