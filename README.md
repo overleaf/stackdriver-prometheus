@@ -33,6 +33,7 @@ cd ~/go/src/github.com/Stackdriver/
 git clone git@github.com:overleaf/stackdriver-prometheus.git
 cd stackdriver-prometheus/
 git checkout release-0.5.0
+go get ./...
 make all
 DOCKER_IMAGE_NAME=gcr.io/overleaf-ops/stackdriver-prometheus make push
 ```
