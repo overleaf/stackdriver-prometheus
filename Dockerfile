@@ -1,4 +1,4 @@
-FROM        quay.io/prometheus/busybox:latest
+FROM        gcr.io/overleaf-ops/busybox:latest
 LABEL maintainer "Stackdriver Engineering <engineering@stackdriver.com>"
 
 COPY prometheus                             /bin/prometheus
