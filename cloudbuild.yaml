@@ -5,7 +5,10 @@ steps:
   entrypoint: ./go.ash
 - name: gcr.io/cloud-builders/docker
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/stackdriver-prometheus', '.']
-images: ['gcr.io/$PROJECT_ID/stackdriver-prometheus']
+images: [
+  'gcr.io/$PROJECT_ID/stackdriver-prometheus:${TAG_NAME}${BRANCH_NAME}',
+  'gcr.io/$PROJECT_ID/stackdriver-prometheus:${BUILD_ID}'
+]
 options:
  diskSizeGb: 200
  machineType: 'N1_HIGHCPU_8'
